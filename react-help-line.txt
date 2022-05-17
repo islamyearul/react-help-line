@@ -1,0 +1,28 @@
+Inline style for background Image
+
+style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/img/bg/5.jpg')` }}
+style={{ marginBottom: '20px'}}
+import { FaPhoneAlt, FaMailBulk, FaMapMarkerAlt, FaMedkit, FaHeartbeat, FaMedrt, FaHandHoldingMedical, FaClock } from "react-icons/fa";
+
+=======================(Icon)
+npm install react-icons
+npm install axios
+import axios from "axios";
+========================= (External Link )
+//More Secure Solution. For JS only.
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
+//Then add to your onClick
+onClick={() => openInNewTab('https://stackoverflow.com')}
+===================(Date Formation)
+Date:
+{new Date().toLocaleString() + ''}   //full
+{new Date().getFullYear()}    //year
+{new Date().toLocaleString("en-US", { day : '2-digit'})}    //day
+{new Date().toLocaleString("en-US", { month: "long" })}   //Month
+{new Date().toLocaleString("locale", { weekday: 'long' })}   //Day Name
+
+  var today = new Date(),
+   time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
